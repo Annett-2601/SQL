@@ -38,18 +38,26 @@
 		SELECT * FROM Customers
 		WHERE City = 'Berlin'
 		OR city = 'London';
+
+
 		
 	Select all records from the Customers table, sort the result alphabetically by the column City.
 		SELECT * FROM Customers
 		ORDER BY City;
+
+
 		
 	Select all records from the Customers table, sort the result reversed alphabetically by the column City.
 		SELECT * FROM Customers
 		ORDER BY City DESC;
 
-	Select all records from the Customers table, sort the result alphabetically, first by the column Country, then, by the column City.
+
+
+	Select all records from the Customers table, sort the result alphabetically, first by the column Country, 
+	then, by the column City.
 		SELECT * FROM Customers
 		ORDER BY country,city;
+
 		
 	Insert a new record in the Customers table.
 	 
@@ -57,5 +65,24 @@
 		(CustomerName, Address, City, PostalCode,Country)
 		VALUES
 		('Hekkan Burger','Gateveien 15','Sandnes','4306','Norway');
+
+	
+	
+
+	Select all records from the Customers where the PostalCode column is empty.
+
 		
-		
+		SELECT * FROM Customers
+		WHERE postalCode IS NULL;
+
+
+
+	Select all records from the Customers where the PostalCode column is NOT empty.
+	SELECT * FROM Customers
+WHERE 
+PostalCode
+ 
+IS NOT
+ 
+NULL
+;
