@@ -183,7 +183,35 @@
 	NOT BETWEEN 10 AND 20;
 	
 	Use the BETWEEN operator to select all the records where the value of the ProductName column is alphabetically between 'Geitost' and 'Pavlova'.
+		SELECT * FROM Products
+		WHERE ProductName BETWEEN 'Geitost' AND 'Pavlova';
+		
+	When displaying the Customers table, make an ALIAS of the PostalCode column, the column should be called Pno instead.
+		SELECT CustomerName, Address,
+		PostalCode AS Pno
+		FROM Customers;
+		
+	When displaying the Customers table, refer to the table as Consumers instead of Customers.
+			SELECT *
+			FROM Customers 
+			AS Consumers;
+			
+			
+	Insert the missing parts in the JOIN clause to join the two tables Orders and Customers, 
+	using the CustomerID field in both tables as the relationship between the two tables.	
+			SELECT *FROM Orders
+			LEFT JOIN Customers
+			ON Orders.CustomerID=Customers.CustomerID;
+			
+			
+	Choose the correct JOIN clause to select all records from the two tables where there is a match in both tables.
 	
-		
-		
-		
+			SELECT * FROM Orders
+			INNER JOIN Customers
+			ON Orders.CustomerID=Customers.CustomerID;
+	
+
+Choose the correct JOIN clause to select all the records from the Customers table plus all the matches in the Orders table.
+		SELECT *FROM Orders
+		RIGHT JOIN Customers
+		ON Orders.CustomerID=Customers.CustomerID;	
